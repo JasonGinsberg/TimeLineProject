@@ -14,6 +14,9 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) ViewController *viewController;
+@property (retain, nonatomic) UIViewController *centerController;
+@property (retain, nonatomic) UIViewController *leftController;
+@property (retain, nonatomic) UIViewController *iCarouselExampleViewController;
 
+@property (retain, nonatomic) UIViewController *imageController;
 @end
