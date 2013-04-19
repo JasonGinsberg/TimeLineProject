@@ -26,6 +26,7 @@
 		963191D6171AEB3B00E8CBC8 /* page.png in Resources */ = {isa = PBXBuildFile; fileRef = 963191D5171AEB3A00E8CBC8 /* page.png */; };
 		96335D661708D0D400E679A2 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96335D641708D0D400E679A2 /* ViewController.xib */; };
 		96335D6A1708F53000E679A2 /* backDrop.png in Resources */ = {isa = PBXBuildFile; fileRef = 96335D691708F52E00E679A2 /* backDrop.png */; };
+		967645921720A67A0069D96C /* recentButtonTop.png in Resources */ = {isa = PBXBuildFile; fileRef = 967645911720A67A0069D96C /* recentButtonTop.png */; };
 		969A47E5170886C200F8E90A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 969A47E4170886C200F8E90A /* UIKit.framework */; };
 		969A47E7170886C200F8E90A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 969A47E6170886C200F8E90A /* Foundation.framework */; };
 		969A47E9170886C200F8E90A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 969A47E8170886C200F8E90A /* CoreGraphics.framework */; };
@@ -122,6 +123,7 @@
 		963191D5171AEB3A00E8CBC8 /* page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = page.png; path = ../../page.png; sourceTree = "<group>"; };
 		96335D651708D0D400E679A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ../../DelegateO/en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		96335D691708F52E00E679A2 /* backDrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backDrop.png; path = ../../backDrop.png; sourceTree = "<group>"; };
+		967645911720A67A0069D96C /* recentButtonTop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recentButtonTop.png; path = ../../recentButtonTop.png; sourceTree = "<group>"; };
 		969A47E1170886C200F8E90A /* Timeline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timeline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		969A47E4170886C200F8E90A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		969A47E6170886C200F8E90A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -308,6 +310,7 @@
 		969A47EB170886C200F8E90A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				967645911720A67A0069D96C /* recentButtonTop.png */,
 				963191D5171AEB3A00E8CBC8 /* page.png */,
 				963191D3171ADC0F00E8CBC8 /* ZEUS_COMEBACK_TIME_MACHINE_by_ZEUSosX.jpg */,
 				963191C1171A314900E8CBC8 /* redBut.png */,
@@ -545,6 +548,7 @@
 				963191CF171AD23C00E8CBC8 /* iCarouselExampleViewController.xib in Resources */,
 				963191D4171ADC0F00E8CBC8 /* ZEUS_COMEBACK_TIME_MACHINE_by_ZEUSosX.jpg in Resources */,
 				963191D6171AEB3B00E8CBC8 /* page.png in Resources */,
+				967645921720A67A0069D96C /* recentButtonTop.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

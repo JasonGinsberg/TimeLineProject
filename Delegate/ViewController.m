@@ -238,10 +238,7 @@
     if (_hit){
         _hit = NO;
         [self.viewDeckController openLeftView];
-        self.deckController.enabled = NO;
-
-        NSLog(@"working");
-        
+        self.deckController.enabled = NO;        
         
     }
     else{
@@ -252,159 +249,12 @@
         
         
     }
-    //    if (_test&&_test2){
-    //        CGRect boxFrame2 = self.tableView2.frame;
-    //        boxFrame2.origin.x = 630;
-    //
-    //        [UIView beginAnimations:nil context:nil];
-    //        [UIView setAnimationDuration:0.25];
-    //        [UIView setAnimationDelay:0.12];
-    //        [UIView setAnimationCurve:UIViewAnimationCurveLinear];
-    //
-    //        self.tableView2.frame = boxFrame2;
-    //        [UIView commitAnimations];
-    //        _test2= NO;
-    //
-    //        CGRect boxFrame = self.tableView.frame;
-    //        boxFrame.origin.x = 1;
-    //        [UIView beginAnimations:nil context:nil];
-    //        [UIView setAnimationDuration:0.25];
-    //        [UIView setAnimationDelay:0.12];
-    //        [UIView setAnimationCurve:UIViewAnimationCurveLinear];
-    //
-    //        self.tableView.frame = boxFrame;
-    //
-    //        [UIView commitAnimations];
-    //        _test= NO;
-    //
-    //
-    //
-    //
-    //    }
-    //    else if (_test&&!_test2){
-    //        CGRect boxFrame = self.tableView.frame;
-    //        boxFrame.origin.x = 1;
-    //
-    //        [UIView beginAnimations:nil context:nil];
-    //        [UIView setAnimationDuration:0.25];
-    //        [UIView setAnimationDelay:0.12];
-    //        [UIView setAnimationCurve:UIViewAnimationCurveLinear];
-    //
-    //        self.tableView.frame = boxFrame;
-    //
-    //        [UIView commitAnimations];
-    //        _test = NO;
-    //
-    //    }
-    //    else if (!_test&&!_test2){
-    //
-    //        CGRect boxFrame = self.tableView.frame;
-    //        boxFrame.origin.x = -281;
-    //
-    //        [UIView beginAnimations:nil context:nil];
-    //        [UIView setAnimationDuration:0.25];
-    //        [UIView setAnimationDelay:0.12];
-    //        [UIView setAnimationCurve:UIViewAnimationCurveLinear];
-    //
-    //        self.tableView.frame = boxFrame;
-    //
-    //        [UIView commitAnimations];
-    //        _test= YES;
-    //
-    //
-    //    }
 }
-- (IBAction)settings:(id)sender {
-    if (!_test2&!_test){
-        CGRect boxFrame = self.tableView.frame;
-        boxFrame.origin.x = -281;
-        [UIView beginAnimations:nil context:nil];
-        [UIView setAnimationDuration:0.25];
-        [UIView setAnimationDelay:0.12];
-        [UIView setAnimationCurve:UIViewAnimationCurveLinear];
-        
-        self.tableView.frame = boxFrame;
-        
-        [UIView commitAnimations];
-        _test= YES;
-        
-        
-        CGRect boxFrame2 = self.tableView2.frame;
-        boxFrame2.origin.x = 90;
-        
-        [UIView beginAnimations:nil context:nil];
-        [UIView setAnimationDuration:0.25];
-        [UIView setAnimationDelay:0.12];
-        [UIView setAnimationCurve:UIViewAnimationCurveLinear];
-        
-        self.tableView2.frame = boxFrame2;
-        
-        [UIView commitAnimations];
-        _test2 = YES;
-        
-        
-        
-    }
-    
-    else if (!_test2&&_test){
-        CGRect boxFrame2 = self.tableView2.frame;
-        boxFrame2.origin.x = 90;
-        
-        [UIView beginAnimations:nil context:nil];
-        [UIView setAnimationDuration:0.25];
-        [UIView setAnimationDelay:0.12];
-        [UIView setAnimationCurve:UIViewAnimationCurveLinear];
-        self.tableView2.frame = boxFrame2;
-        
-        [UIView commitAnimations];
-        _test2 = YES;
-        
-    }
-    
-    else if (_test2&&_test){
-        CGRect boxFrame2 = self.tableView2.frame;
-        boxFrame2.origin.x = 630;
-        
-        [UIView beginAnimations:nil context:nil];
-        [UIView setAnimationDuration:0.25];
-        [UIView setAnimationDelay:0.12];
-        [UIView setAnimationCurve:UIViewAnimationCurveLinear];
-        
-        self.tableView2.frame = boxFrame2;
-        [UIView commitAnimations];
-        _test2= NO;
-        
-        
-    }
-    
-}
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
-}
-
-
-- (IBAction)enter:(id)sender {
-    //when search term logged
-    _background.hidden = YES;
-    _backView2.hidden = YES;
-    
-    
-    iCarouselExampleViewController *viewController = [[iCarouselExampleViewController alloc] init];
-    [self presentViewController:viewController animated:YES completion:nil];
-    
-    [self.tableView beginUpdates];
-    [self.listOfItems addObject:self.textField.text];
-    NSArray *paths = [NSArray arrayWithObject:[NSIndexPath indexPathForRow:[self.listOfItems count]-1 inSection:0]];
-    [[self tableView] insertRowsAtIndexPaths:paths withRowAnimation:UITableViewRowAnimationTop];
-    [self.tableView endUpdates];
-    
-    //this is where search term must take parameter
-    
-    //        self.link = @"Timeline_of_United_States_history_(1790%E2%80%931819)";
-    //      [self openView2:UIViewAnimationOptionTransitionCurlDown];
-    
 }
 
 
@@ -443,6 +293,25 @@
 -(BOOL) textFieldShouldReturn:(UITextField *)textField{
     
     [_textField resignFirstResponder];
+    
+    iCarouselExampleViewController *viewController = [[iCarouselExampleViewController alloc] init];
+    viewController.searchTerm = self.textField.text;
+    
+    [self presentViewController:viewController animated:YES completion:nil];
+    _background.hidden = YES;
+    _backView2.hidden = YES;
+    
+  
+    
+    [self.tableView beginUpdates];
+    [self.listOfItems addObject:self.textField.text];
+    NSArray *paths = [NSArray arrayWithObject:[NSIndexPath indexPathForRow:[self.listOfItems count]-1 inSection:0]];
+    [[self tableView] insertRowsAtIndexPaths:paths withRowAnimation:UITableViewRowAnimationTop];
+    [self.tableView endUpdates];
+    //this is where search term must take parameter
+    
+    //        self.link = @"Timeline_of_United_States_history_(1790%E2%80%931819)";
+    //      [self openView2:UIViewAnimationOptionTransitionCurlDown];
     return YES;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
