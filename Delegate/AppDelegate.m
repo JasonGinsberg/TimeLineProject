@@ -33,10 +33,10 @@
 
     
     deckController.rightSize = 100;
-    
+    deckController.elastic = NO;
     /* To adjust speed of open/close animations, set either of these two properties. */
-     deckController.openSlideAnimationDuration = 0.50f;
-     deckController.closeSlideAnimationDuration = 0.50f;
+//     deckController.openSlideAnimationDuration = 0.50f;
+//     deckController.closeSlideAnimationDuration = 0.50f;
     
     self.window.rootViewController = deckController;
     [self.window makeKeyAndVisible];

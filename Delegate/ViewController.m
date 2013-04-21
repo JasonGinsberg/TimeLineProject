@@ -22,6 +22,9 @@
 @implementation ViewController
 
 @synthesize popoverController = _popoverController2;
+//add .org,.net functionality either by manual typing(easy) or adding button that adds text, or adding scroll picker
+
+
 
 //To Do:
 //recent doesnt work after entering search
@@ -137,7 +140,7 @@
     _timeLabelYear.text = [NSString stringWithFormat:@"%d",year];
     _timeLabelYear.font =    [UIFont fontWithName:@"DBLCDTempBlack" size:26];
     
-    _timeLabelMonth.text = [NSString stringWithFormat:@"%d",month];
+    _timeLabelMonth.text = [NSString stringWithFormat:@"%02d",month];
     _timeLabelMonth.font =    [UIFont fontWithName:@"DBLCDTempBlack" size:25];
     
     _timeLabelDay.text = [NSString stringWithFormat:@"%d",day];
@@ -238,13 +241,9 @@
     if (_hit){
         _hit = NO;
         [self.viewDeckController openLeftView];
-        self.deckController.enabled = NO;        
-        
     }
     else{
         _hit = YES;
-        self.deckController.enabled = YES;
-        
         [self.viewDeckController closeLeftView];
         
         
@@ -301,7 +300,7 @@
     _background.hidden = YES;
     _backView2.hidden = YES;
     
-  
+    
     
     [self.tableView beginUpdates];
     [self.listOfItems addObject:self.textField.text];
@@ -479,14 +478,14 @@
     //	// remove the current view and replace with myView1
     //	[_view2 removeFromSuperview];
     //	[theWindow addSubview:_view1];
-    //	
+    //
     //	// set up an animation for the transition between the views
     //	CATransition *animation = [CATransition animation];
     //	[animation setDuration:0.5];
     //	[animation setType:kCATransitionReveal];
     //    [animation setSubtype:kCATransitionFromLeft];
     //    [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
-    //	
+    //
     //	[[theWindow layer] addAnimation:animation forKey:@"SwitchToView2"];
 }
 

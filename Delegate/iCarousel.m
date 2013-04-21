@@ -1660,7 +1660,7 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
     [self insertView:nil atIndex:index];
     UIView *itemView = [self loadViewAtIndex:index];
     itemView.superview.layer.opacity = 0.0f;
-    
+    NSLog(@"*** %i",index);
     if (_itemWidth == 0)
     {
         [self updateItemWidth];
