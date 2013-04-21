@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'JsonF' target in the 'JsonF' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
